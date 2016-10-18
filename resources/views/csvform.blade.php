@@ -113,7 +113,7 @@
 <script type="text/javascript">
 $(document).ready(function () {
     $(".datepicker").datepicker({
-        format: 'dd/mm/yyyy',
+        format: 'yy-mm-dd',
     }).on('changeDate', function (e) {
         $(this).datepicker('hide');
 
