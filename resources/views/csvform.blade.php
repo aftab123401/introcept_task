@@ -28,7 +28,7 @@
                                         <td>
                                             <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                                             <input type="text" name="name" placeholder="Name" required=true class="form-control"/> 
-                                            {{$errors->first("name")}}
+                                             <span class="validation">{{$errors->first("name")}}</span>
                                         </td>
                                         <td>
                                             <input type="text" name="address" placeholder="Address" required=true class="form-control"/>
@@ -42,55 +42,60 @@
                                         </td>
                                         <td>
                                             <input type="text" name="email" placeholder="Email" required=true class="form-control"/> 
-                                            {{$errors->first("email")}}
+                                            <span class="validation">{{$errors->first("email")}}</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <select name="educationlevel" class="form-control"> 
-                                                <option value="1" class="disabled-option   selected" hidden selected required=true >
+                                            <select name="educationlevel" class="form-control" type="text"> 
+                                                <option value="" class="disabled-option   selected" hidden selected required=true >
                                                 <span>Select Education</span>
                                                 </option>
                                                 <option value="it">It</option>
                                                 <option value="engineering">Engineering</option>
                                                 <option value="management">Management</option>
-                                            </select>  
+                                            </select> 
+                                             <span class="validation">{{$errors->first("educationlevel")}}</span>
                                         </td>
                                         <td>
                                             <select name="nationality" class="form-control">  
-                                                <option value="1" class="disabled-option   selected" hidden selected required=true >
+                                                <option value="" class="disabled-option   selected" hidden selected required=true >
                                                 <span>Select country</span>
                                                 </option>
                                                 <option value="nepali" class="form-control"> Nepali</option>
                                                 <option value="indian" class="form-control"> Indian</option>
                                                 <option value="srilankan" class="form-control"> Srilankan</option>
                                             </select> 
+                                             <span class="validation">{{$errors->first("nationality")}}</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <input name="dobb" class="form-control datepicker" type="text" placeholder="Date of birth" required=true/> 
+                                             <span class="validation">{{$errors->first("dobb")}}</span>
                                         </td>
                                         <td>
                                             <select name="contactmode" class="form-control"> 
-                                                <option value="1" class="disabled-option   selected" hidden selected required=true >
+                                                <option value="" class="disabled-option   selected" hidden selected required=true >
                                                 <span>Select mode of contact</span>
                                                 </option>
                                                 <option value="email" class="form-control"> Email</option>
                                                 <option value="phone" class="form-control"> Phone</option>
                                                 <option value="none" class="form-control"> None</option>
                                             </select>
+                                            <span class="validation">{{$errors->first("contactmode")}}</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <select name="genderr" class="form-control"> 
-                                                <option value="1" class="disabled-option   selected" hidden selected required=true >
+                                                <option value="" class="disabled-option   selected" hidden selected required=true >
                                                 <span>Select Gender</span>
                                                 </option>
                                                 <option value="male" class="form-control"> Male</option>
                                                 <option value="female" class="form-control"> Female</option>
                                             </select>
+                                             <span class="validation">{{$errors->first("genderr")}}</span>
                                         </td>
                                     </tr>
                                     <tr>
