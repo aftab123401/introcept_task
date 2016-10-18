@@ -27,6 +27,11 @@ class csvcontroller extends Controller {
                     'phoneno' => 'required|regex:/(98)/|max:10',
                     'email' => 'required|email|max:150|unique:csvmodels',
                     'address' => 'required|max:30',
+                    'educationlevel' => 'required',
+                    'nationality' => 'required',
+                    'dobb' => 'required',
+                    'contactmode' => 'required',
+                    'genderr' => 'required',
         ]);
 
         //if errors occurs
